@@ -9,10 +9,11 @@ import filterIcon from '../../svg/filterIcon.svg';
  * 
  * @param {Object} props - is the props objects
  * @param {Function} props.onSearch - function that will be called on search trigger
+ * @param {Function} props.onFilterClick - function that will be called on filter click
  * @param {String} props.initialSearch - the initial term if any
  * @returns the rendered component  
  */
-function Search ({ onSearch }) {
+function Search ({ onSearch, onFilterClick }) {
     const handleOnTextChange = (event) => {
         console.log(event);
         onSearch(event);
@@ -24,7 +25,7 @@ function Search ({ onSearch }) {
                 <img src={searchIcon} className={styles.searchIcon} alt="Search" />
                 <input type="text" className={styles.searchInput} onChange={handleOnTextChange} placeholder="Search experiences"></input>
             </div>
-            <button className={styles.searchFilterButton}>
+            <button className={styles.searchFilterButton} onClick={onFilterClick}>
                 <img src={filterIcon} className={styles.searchIcon} alt="Filter" />
             </button>
         </div>
@@ -34,11 +35,13 @@ function Search ({ onSearch }) {
 Search.props = {
     onSearch: PropTypes.func,
     initialSearch: PropTypes.string,
+    onFilterClick: PropTypes.func,
 }
 
 Search.defaultProps = {
     onSearch: () => {},
     initialSearch: '',
+    onFilterClick: () => {},
 }
 
 export default Search;

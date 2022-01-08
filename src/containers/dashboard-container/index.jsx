@@ -4,6 +4,7 @@ import { getPopularCategories, getRecentExperiences, getTrendingExperiences } fr
 import Categories from '../categories';
 import Experiences from '../recent-experiences';
 import styles from './index.module.css';
+import Modal from '../../components/modal';
 
 /**
  * This section will handle the requesting data for Recent Experiences and Popular Categories.
@@ -16,6 +17,7 @@ function DashboardContainer (props) {
     const [experiences, setExperiences] = useState([]);
     const [categories, setCategories] = useState([]);
     const [trending, setTrending] = useState([]);
+    const [showFilterModal, setShowFilterModal] = useState(false);
 
     useEffect(() => {
         getRecentExperiences().then(result => setExperiences(result));
@@ -27,13 +29,22 @@ function DashboardContainer (props) {
         console.log(event);
     }
 
+    const handleOnFilterClick = (filters) => {
+        setShowFilterModal(!showFilterModal);
+    }
+
     return (
-        <div className={styles.container}>
-            <Search onSearch={handleOnSearch} />
-            <Experiences experiences={experiences} title="Recent Experiences" />
-            <Categories categories={categories} title="Popular Categories" seeAll={true} />
-            <Experiences experiences={trending} title="Trending Experiences" seeAll={true} />
-        </div>
+        <>
+            <div className={styles.container}>
+                <Search onSearch={handleOnSearch} onFilterClick={handleOnFilterClick} />
+                <Experiences experiences={experiences} title="Recent Experiences" />
+                <Categories categories={categories} title="Popular Categories" seeAll={true} />
+                <Experiences experiences={trending} title="Trending Experiences" seeAll={true} />
+            </div>
+            <Modal show={showFilterModal}>
+                <h3>Modal content</h3>
+            </Modal>
+        </>
     );
 }
 
