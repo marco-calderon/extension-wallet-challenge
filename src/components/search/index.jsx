@@ -16,11 +16,11 @@ function Search ({ onSearch }) {
     return (
         <div className={styles.container}>
             <div className={styles.searchContainer}>
-                <img src={searchIcon} className={styles.searchIcon} />
+                <img src={searchIcon} className={styles.searchIcon} alt="Search" />
                 <input type="text" className={styles.searchInput} onChange={handleOnTextChange} placeholder="Search experiences"></input>
             </div>
             <button className={styles.searchFilterButton}>
-                <img src={filterIcon} className={styles.searchIcon} />
+                <img src={filterIcon} className={styles.searchIcon} alt="Filter" />
             </button>
         </div>
     );

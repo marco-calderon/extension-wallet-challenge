@@ -16,7 +16,7 @@ function Experience ({ experience, onClick }) {
                 <span className={styles.detailsUsers}>{experience.users}</span>
             </div>
             <Button>
-                <img src={rightArrowIcon} />
+                <img src={rightArrowIcon} alt="Go to Experience details" />
             </Button>
         </div>
     );

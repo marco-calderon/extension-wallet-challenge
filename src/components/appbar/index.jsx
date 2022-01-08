@@ -12,20 +12,20 @@ export const Appbar = ({ back, home }) => {
         <div className={styles.appbar}>
             {back && (
                 <button type="button" className={styles.button}>
-                    <img src={backIcon} className={styles.icon} />
+                    <img src={backIcon} className={styles.icon} alt="Back"/>
                 </button>
             )}
             {home && (
                 <button type="button" className={styles.button}>
-                    <img src={homeIcon} className={styles.icon} />
+                    <img src={homeIcon} className={styles.icon} alt="Home" />
                 </button>
             )}
             <UserDropdown src="" name="" />
             <button type="button" className={styles.button}>
-                <img src={notificationsIcon} className={styles.icon} />
+                <img src={notificationsIcon} className={styles.icon} alt="Notifications" />
             </button>
             <button type="button" className={styles.button}>
-                <img src={settingsIcon} className={styles.icon} />
+                <img src={settingsIcon} className={styles.icon} alt="Settings" />
             </button>
         </div>
     );

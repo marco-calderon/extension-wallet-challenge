@@ -9,7 +9,7 @@ function UserDropdown (props) {
         <div className={styles.dropdown}>
             <img src={avatarIcon} />
             <h3 className={styles.name}>Johndoe.near</h3>
-            <img src={downArrowIcon} className={styles.dropdownIcon} />
+            <img src={downArrowIcon} className={styles.dropdownIcon} alt="Change user" />
         </div>
     );
 }
