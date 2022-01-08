@@ -11,6 +11,12 @@ import Tabs from '../../components/tabs';
 import DetailsTab from '../../containers/experiences/details';
 import ActivitiesTab from '../../containers/experiences/activities';
 
+/**
+ * Swhos the experience page.
+ * 
+ * @param {Object} props - is the props object
+ * @returns the rendered component
+ */
 function ExperiencePage (props) {
     const params = useParams();
 
@@ -23,6 +29,7 @@ function ExperiencePage (props) {
         getActivities(params.experienceId).then(result => setActivities(result));
     }, [params.experienceId]);
 
+    // Show a loading when experience is loading.
     if (!experience) {
         return (
             <h4>Loading...</h4>
@@ -36,10 +43,9 @@ function ExperiencePage (props) {
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
-                <div className={styles.headerColor}></div>
+                <div className={styles.headerColor} style={{ background: experience.background }}></div>
                 <div className={styles.headerIconContainer}>
-                    <div className={styles.headerIcon}>
-                        <img src={rightArrowIcon} alt="Icon" style={{ color: '#fff' }} />
+                    <div className={styles.headerIcon} style={{ background: experience.color }}>
                     </div>
                     <Button>
                         <div className={styles.shareButton}>

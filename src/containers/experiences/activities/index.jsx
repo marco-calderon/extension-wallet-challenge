@@ -14,7 +14,7 @@ function ActivitiesTab ({ activities }) {
         <div className={styles.container}>
             <span className={styles.note}>{activities && activities.length} activities found</span>
             {activities && activities.map(a => (
-                <Activity user={a.user} description={a.description} timestamp={a.timestamp} />
+                <Activity key={a.id} user={a.user} description={a.description} timestamp={a.timestamp} />
             ))}
         </div>
     );

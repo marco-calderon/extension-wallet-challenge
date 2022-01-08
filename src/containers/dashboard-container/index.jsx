@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Search from '../../components/search';
-import { getCategories, getPopularCategories, getRecentExperiences, getTrendingExperiences } from '../../services/sandbox.service';
+import { getCategories, getFilteredExperiences, getPopularCategories, getRecentExperiences, getTrendingExperiences } from '../../services/sandbox.service';
 import Categories from '../categories';
 import Experiences from '../recent-experiences';
 import styles from './index.module.css';
@@ -24,6 +24,7 @@ function DashboardContainer (props) {
     const [allCategories, setAllCategories] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
+    const [searching, setSearching] = useState(false);
 
     useEffect(() => {
         getRecentExperiences().then(result => setExperiences(result));
@@ -37,12 +38,13 @@ function DashboardContainer (props) {
 
     const handleOnSearch = (event) => {
         setSearchTerm(event);
-        const filtered = [
-            ...experiences.filter(e => e.name.toLowerCase().includes(event)),
-            ...trending.filter(e => e.name.toLowerCase().includes(event)),
-        ];
 
-        setSearchResults(filtered);
+        if (!searching) {
+            getFilteredExperiences(event).then(filtered => {
+                setSearchResults(filtered);
+                setSearching(false);
+            });
+        }
     }
 
     const handleOnFilterClick = (filters) => {

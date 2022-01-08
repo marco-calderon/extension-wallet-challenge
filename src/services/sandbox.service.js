@@ -9,6 +9,7 @@ const experiences = [
         category: 'Utilities',
         details: 'it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime- paperlessly. ',
         url: 'https://docusignn.io',
+        background: '#F5F5F5',
     },
     {
         id: 'asd124',
@@ -20,6 +21,7 @@ const experiences = [
         category: 'Utilities',
         details: 'it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime- paperlessly. ',
         url: 'https://docusignn.io',
+        background: '#F5F5F5',
     },
     {
         id: 'asd125',
@@ -31,6 +33,7 @@ const experiences = [
         category: 'Utilities',
         details: 'it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime- paperlessly. ',
         url: 'https://docusignn.io',
+        background: '#F5F5F5',
     },
 ];
 
@@ -190,6 +193,18 @@ export const getRecentExperiences = () => {
  export const getTrendingExperiences = () => {
     return new Promise((resolve, rejext) => {
         resolve(experiences)
+    });
+}
+
+/**
+ * Obtains a list of filtered experiences by a search term.
+ * 
+ * @param {String} term - is the search term
+ * @returns an Array of filtered experiences.
+ */
+export const getFilteredExperiences = (term) => {
+    return new Promise((resolve, reject) => {
+        resolve(experiences.filter(e => e.name.toLowerCase().includes(term)));
     });
 }
 
