@@ -8,12 +8,12 @@ function Category ({ category }) {
     return (
         <div className={styles.category} style={{ background: category.background }}>
             <div className={styles.iconContainer}>
-                <img className={styles.icon} src={category.icon} style={{ background: category.iconColor }}></img>
+                <img className={styles.icon} src={category.icon} style={{ background: category.iconColor }} alt="Category icon"></img>
             </div>
             <div className={styles.titleContainer}>
-                <h3 className={styles.title}></h3>
+                <h3 className={styles.title}>{category.name}</h3>
                 <Button>
-                    <img className={styles.titleIcon} src={rightArrowIcon}></img>
+                    <img className={styles.titleIcon} src={rightArrowIcon} alt="Go to Category details"></img>
                 </Button>
             </div>
         </div>
