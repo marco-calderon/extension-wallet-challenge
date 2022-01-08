@@ -15,7 +15,6 @@ import filterIcon from '../../svg/filterIcon.svg';
  */
 function Search ({ onSearch, onFilterClick }) {
     const handleOnTextChange = (event) => {
-        console.log(event);
         onSearch(event);
     }
 
