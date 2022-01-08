@@ -1,14 +1,13 @@
 import React from 'react';
-import './index.css';
+import Checkbox from '../../../components/checkbox';
+import styles from './index.module.css';
 
-function FilterEntry ({ checked, label }) {
+function FilterEntry ({ checked, label, onCheckChange }) {
     return (
-        <div className="entry-container">
-            <label className="container">
-                <input type="checkbox" checked={checked}></input>
-                <span className="checkmark"></span>
-            </label>
-            <span>{label}</span>
+        <div className={styles.container}>
+            <Checkbox value={checked} readOnly={true} onChange={onCheckChange}>
+                <span>{label}</span>
+            </Checkbox>
         </div>
     );
 }

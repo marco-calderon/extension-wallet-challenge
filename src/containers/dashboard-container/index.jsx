@@ -36,6 +36,10 @@ function DashboardContainer (props) {
         setShowFilterModal(!showFilterModal);
     }
 
+    const handleOnFilterOptionClick = (event) => {
+        console.log(event);
+    } 
+
     return (
         <>
             <div className={styles.container}>
@@ -46,7 +50,7 @@ function DashboardContainer (props) {
             </div>
             <Modal show={showFilterModal} onClose={() => setShowFilterModal(false)}>
                 <h3>Filter</h3>
-                <FilterOptions options={allCategories} />
+                <FilterOptions options={allCategories} onFilterClick={handleOnFilterOptionClick} />
             </Modal>
         </>
     );

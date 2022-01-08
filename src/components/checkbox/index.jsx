@@ -3,8 +3,10 @@ import './index.css';
 
 function Checkbox (props) {
     return (
-        <label className="container" onClick={props.onChange}>
-            <input type="checkbox" onChange={props.onChange} {...props}></input>
+        <label className="container" onClick={props.onChange}>{props.children}
+            <input type="checkbox" checked={props.value} onChange={(event) => {
+                props.onChange(event);
+            }}></input>
             <span className="checkmark"></span>
         </label>
     );

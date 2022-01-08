@@ -1,11 +1,11 @@
 import React from 'react';
 import FilterEntry from './entry';
 
-function FilterOptions ({ options }) {
+function FilterOptions ({ options, onFilterClick }) {
     return (
         <>
             {options && options.map(o => (
-                <FilterEntry checked={o.checked} label={o.label} />
+                <FilterEntry key={o.id} checked={o.checked} label={o.label} onCheckChange={() => onFilterClick(o)} />
             ))}
         </>
     );
