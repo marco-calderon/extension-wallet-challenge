@@ -2,13 +2,13 @@
     border-radius: 6px;
     display: flex;
     flex-direction: column;
+    padding: 8px;
 }
 
 .iconContainer {
     flex: 1;
-    align-self: flex-start;
-    align-items: center;
-    justify-content: flex-start;
+    /* align-self: flex-start; */
+    margin-bottom: 16px;
 }
 
 .icon {
@@ -22,11 +22,14 @@
 
 .titleContainer {
     display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .title {
     font-size: 15px;
     margin: 0;
+    flex: 1;
 }
 
 .titleIcon {

@@ -10,7 +10,8 @@
 }
 
 .categories {
-    display: flex;
+    display: grid;
     flex: 1;
-
+    grid-template-columns: auto auto;
+    grid-gap: 14px;
 }
