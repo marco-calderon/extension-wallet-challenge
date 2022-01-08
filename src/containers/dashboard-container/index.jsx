@@ -25,7 +25,10 @@ function DashboardContainer (props) {
         getRecentExperiences().then(result => setExperiences(result));
         getPopularCategories().then(result => setCategories(result));
         getTrendingExperiences().then(result => setTrending(result));
-        getCategories().then(result => setAllCategories(result.map(o => ({ checked: false, id: o.id, label: o.name }))));
+        getCategories().then(result => setAllCategories([
+            { checked: false, id: 'all', label: 'All Experiences', category: null },
+            ...result.map(o => ({ checked: false, id: o.id, label: o.name, category: o }))
+        ]));
     }, []);
 
     const handleOnSearch = (event) => {
@@ -37,7 +40,18 @@ function DashboardContainer (props) {
     }
 
     const handleOnFilterOptionClick = (event) => {
-        console.log(event);
+        setAllCategories(allCategories.map(c => {
+            if (c.id === event.id) {
+                return {
+                    ...c,
+                    checked: !event.checked,
+                };
+            }
+
+            return {
+                ...c,
+            };
+        }))
     } 
 
     return (
@@ -49,7 +63,7 @@ function DashboardContainer (props) {
                 <Experiences experiences={trending} title="Trending Experiences" seeAll={true} />
             </div>
             <Modal show={showFilterModal} onClose={() => setShowFilterModal(false)}>
-                <h3>Filter</h3>
+                <h3 className={styles.modalTitle}>Filter</h3>
                 <FilterOptions options={allCategories} onFilterClick={handleOnFilterOptionClick} />
             </Modal>
         </>

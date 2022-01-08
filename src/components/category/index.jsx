@@ -15,7 +15,6 @@ function Category ({ category }) {
     return (
         <div className={styles.category} style={{ background: category.background }}>
             <div className={styles.iconContainer}>
-                {/* <img className={styles.icon} src={category.icon} style={{ background: category.iconColor }} alt="Category icon"></img> */}
                 <div className={styles.icon} style={{ background: category.iconColor }}>
                     <span className="iconify" data-icon={category.icon} style={{ color: '#fff' }}></span>
                 </div>

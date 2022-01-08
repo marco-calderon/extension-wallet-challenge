@@ -5,7 +5,7 @@ import styles from './index.module.css';
 function FilterEntry ({ checked, label, onCheckChange }) {
     return (
         <div className={styles.container}>
-            <Checkbox value={checked} readOnly={true} onChange={onCheckChange}>
+            <Checkbox value={checked} readOnly={true} onCheckChange={onCheckChange}>
                 <span>{label}</span>
             </Checkbox>
         </div>
