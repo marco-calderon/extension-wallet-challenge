@@ -1,0 +1,6 @@
+.tabsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #DFDFE0;
+}

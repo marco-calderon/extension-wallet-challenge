@@ -1,3 +1,105 @@
+const experiences = [
+    {
+        id: 'asd123',
+        name: 'DeFi Swap',
+        description: 'Swap your digital assets',
+        color: '#2F80ED',
+        icon: '',
+        users: '+200 users',
+        category: 'Utilities',
+        details: 'it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime- paperlessly. ',
+        url: 'https://docusignn.io',
+    },
+    {
+        id: 'asd124',
+        name: 'Docu sign',
+        description: 'sign smart contracts seamlessly',
+        color: '#BB85FF',
+        icon: '',
+        users: '+1k users',
+        category: 'Utilities',
+        details: 'it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime- paperlessly. ',
+        url: 'https://docusignn.io',
+    },
+    {
+        id: 'asd125',
+        name: 'Experience',
+        description: 'Description',
+        color: '#00C08B',
+        icon: '',
+        users: '+500 users',
+        category: 'Utilities',
+        details: 'it is easy to electronically sign, manage and distribute all your contracts and documents safely, securely, anywhere, anytime- paperlessly. ',
+        url: 'https://docusignn.io',
+    },
+];
+
+const activities = [
+    {
+        experienceId: 'asd123',
+        id: 'qwe123',
+        user: 'johndoe.near',
+        description: 'signed the contract successfully',
+        timestamp: '2 days ago',
+    },
+    {
+        experienceId: 'asd123',
+        id: 'qwe124',
+        user: 'johndoe.near',
+        description: 'signed the contract successfully',
+        timestamp: '2 days ago',
+    },
+    {
+        experienceId: 'asd123',
+        id: 'qwe125',
+        user: 'johndoe.near',
+        description: 'signed the contract successfully',
+        timestamp: '2 days ago',
+    },
+    {
+        experienceId: 'asd124',
+        id: 'qwe123',
+        user: 'johndoe.near',
+        description: 'signed the contract successfully',
+        timestamp: '2 days ago',
+    },
+    {
+        experienceId: 'asd124',
+        id: 'qwe124',
+        user: 'johndoe.near',
+        description: 'signed the contract successfully',
+        timestamp: '2 days ago',
+    },
+    {
+        experienceId: 'asd124',
+        id: 'qwe125',
+        user: 'johndoe.near',
+        description: 'signed the contract successfully',
+        timestamp: '2 days ago',
+    },
+    {
+        experienceId: 'asd125',
+        id: 'qwe123',
+        user: 'johndoe.near',
+        description: 'signed the contract successfully',
+        timestamp: '2 days ago',
+    },
+    {
+        experienceId: 'asd125',
+        id: 'qwe124',
+        user: 'johndoe.near',
+        description: 'signed the contract successfully',
+        timestamp: '2 days ago',
+    },
+    {
+        experienceId: 'asd125',
+        id: 'qwe125',
+        user: 'johndoe.near',
+        description: 'signed the contract successfully',
+        timestamp: '2 days ago',
+    },
+];
+
 /**
  * Gets the recent experiences.
  * 
@@ -18,30 +120,7 @@
  */
 export const getRecentExperiences = () => {
     return new Promise((resolve, rejext) => {
-        resolve([
-            {
-                id: 'asd123',
-                name: 'DeFi Swap',
-                description: 'Swap your digital assets',
-                color: '#2F80ED',
-                icon: '',
-                users: '+200 users'
-            },
-            {
-                id: 'asd124',
-                name: 'Docu sign',
-                description: 'sign smart contracts seamlessly',
-                color: '#BB85FF',
-                icon: '+1k users',
-            },
-            {
-                id: 'asd125',
-                name: 'Experience',
-                description: 'Description',
-                color: '#00C08B',
-                icon: '+500 users',
-            },
-        ])
+        resolve(experiences)
     });
 }
 
@@ -65,33 +144,57 @@ export const getRecentExperiences = () => {
  */
  export const getTrendingExperiences = () => {
     return new Promise((resolve, rejext) => {
-        resolve([
-            {
-                id: 'asd123',
-                name: 'DeFi Swap',
-                description: 'Swap your digital assets',
-                color: '#2F80ED',
-                icon: '',
-                users: '+200 users'
-            },
-            {
-                id: 'asd124',
-                name: 'Docu sign',
-                description: 'sign smart contracts seamlessly',
-                color: '#BB85FF',
-                icon: '',
-                users: '+1k users',
-            },
-            {
-                id: 'asd125',
-                name: 'Experience',
-                description: 'Description',
-                color: '#00C08B',
-                icon: '',
-                users: '+500 users',
-            },
-        ])
+        resolve(experiences)
     });
+}
+
+/**
+ * Gets a experience from the mock data. 
+ * 
+ * It will return an array of elements with this structure:
+ * 
+ * ```
+ * {
+ *    id: 'asd123',
+ *    name: 'DeFi Swap',
+ *    description: 'Swap your digital assets',
+ *    color: '#2F80ED',
+ *    icon: '',
+ *    users: '+200 users'
+ * }
+ * ```
+ * 
+ * @param {String} id - is the identifier of the experience.
+ * @returns the experience found.
+ */
+export const getExperience = (id) => {
+    return new Promise((resolve, reject) => {
+        resolve(experiences.find(e => e.id === id));
+    });
+}
+
+/**
+ * Gets the related activities given an experience id.
+ * 
+ * It will return an array of objects of the next shape:
+ * 
+ * ```
+ * {
+ *     experienceId: 'asd123',
+ *     id: 'qwe123',
+ *     user: 'johndoe.near',
+ *     description: 'signed the contract successfully',
+ *     timestamp: '2 days ago',
+ * },
+ * ```
+ * 
+ * @param {String} experienceId - is the experience Id to filter the activities
+ */
+export const getActivities = (experienceId) => {
+    return new Promise((resolve, reject) => {
+        resolve(activities.filter(a => a.experienceId === experienceId));
+    })
+    
 }
 
 /**

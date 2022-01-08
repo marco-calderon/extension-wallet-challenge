@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 23px;
+}
+
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.desc {
+    font-size: 14px;
+    color: #414047;
+    margin: 0;
+    margin-bottom: 23px;
+}
+
+.url {
+    font-size: 14px;
+    color: #587BE0;
+    display: flex;
+    align-items: center;
+}

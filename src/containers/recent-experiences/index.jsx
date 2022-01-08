@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
  */
 function Experiences ({ title, experiences, seeAll, onSeeAll }) {
     const navigate = useNavigate();
+    
     const handleOnExperienceClick = (event) => {
         navigate(`/experience/${event.id}`);
     } 
