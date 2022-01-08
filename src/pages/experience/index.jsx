@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styles from './index.module.css';
-import rightArrowIcon from '../../svg/rightArrowIcon.svg';
 import { useParams } from 'react-router-dom';
 import shareIcon from '../../svg/shareIcon.svg';
 import openIcon from '../../svg/openIcon.svg';

@@ -6,6 +6,7 @@ import homeIcon from '../../svg/homeIcon.svg';
 import notificationsIcon from '../../svg/notificationsIcon.svg';
 import settingsIcon from '../../svg/settingsIcon.svg';
 import UserDropdown from '../user-dropdown';
+import { useNavigate } from 'react-router-dom';
 
 /**
  * Displays the app bar for the application.
@@ -16,10 +17,12 @@ import UserDropdown from '../user-dropdown';
  * @returns the rendered component
  */
 export const Appbar = ({ back, home }) => {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.appbar}>
             {back && (
-                <button type="button" className={styles.button}>
+                <button type="button" className={styles.button} onClick={() => navigate(-1)}>
                     <img src={backIcon} className={styles.icon} alt="Back"/>
                 </button>
             )}
