@@ -1,0 +1,40 @@
+.experience {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-bottom: 16px;
+    align-items: center;
+}
+
+.iconContainer {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 69px;
+    height: 69px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    flex: 1;
+}
+
+.detailsTitle {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.detailsDesc {
+    font-size: 12px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.detailsUsers {
+    font-size: 12px;
+    color: '#587BE0';
+}

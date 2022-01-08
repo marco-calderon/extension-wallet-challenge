@@ -1,0 +1,30 @@
+.appbar {
+    display: flex;
+    background: #F5F5F5;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 2px solid #DFDFE0;
+}
+
+.button {
+    cursor: pointer;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0px;
+    font: inherit;
+    outline: inherit;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.separator {
+    width: 20px;
+}

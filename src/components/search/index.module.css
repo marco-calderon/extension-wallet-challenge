@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+}
+
+.searchContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #F5F5F5;
+    border-radius: 9px;
+    padding: 9px;
+    flex: 1;
+}
+
+.searchInput {
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    margin-left: 9px;
+    flex: 1;
+}
+
+.searchIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.searchFilterButton {
+    cursor: pointer;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0px;
+    font: inherit;
+    outline: inherit;
+    margin: 9px;
+}

@@ -1,0 +1,32 @@
+.dropdown {
+    border-radius: 30px;
+    border: 1px solid #DFDFE0;
+    background: #fff;
+    flex: 1;
+    flex-direction: row;
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+}
+
+.name {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.avatar-container {
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+.dropdownIcon {
+    margin-right: 8px;
+}

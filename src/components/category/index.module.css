@@ -1,0 +1,35 @@
+.category {
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconContainer {
+    flex: 1;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.titleContainer {
+    display: flex;
+}
+
+.title {
+    font-size: 15px;
+    margin: 0;
+}
+
+.titleIcon {
+    width: 15px;
+    height: 15px;
+}
