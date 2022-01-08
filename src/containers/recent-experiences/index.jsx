@@ -3,6 +3,14 @@ import { PropTypes } from 'prop-types';
 import Experience from '../../components/experience';
 import styles from './index.module.css';
 
+/**
+ * Shows a list of Experiences group given a title and content.
+ * 
+ * @param {Object} props - is the props object
+ * @param {String} title - is the title of this group
+ * @param {Array<Experience>} experiences - is the array of the data to display (Experiences)
+ * @returns the rendered component
+ */
 function Experiences (props) {
     const handleOnExperienceClick = (event) => {
         console.log(event);

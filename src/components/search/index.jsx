@@ -4,6 +4,14 @@ import styles from './index.module.css';
 import searchIcon from '../../svg/searchIcon.svg';
 import filterIcon from '../../svg/filterIcon.svg';
 
+/**
+ * Displays a search that usually will be appearing for filtering experiences
+ * 
+ * @param {Object} props - is the props objects
+ * @param {Function} props.onSearch - function that will be called on search trigger
+ * @param {String} props.initialSearch - the initial term if any
+ * @returns the rendered component  
+ */
 function Search ({ onSearch }) {
     const handleOnTextChange = (event) => {
         console.log(event);

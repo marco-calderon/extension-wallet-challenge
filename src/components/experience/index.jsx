@@ -4,6 +4,13 @@ import styles from './index.module.css';
 import rightArrowIcon from '../../svg/rightArrowIcon.svg';
 import Button from '../button';
 
+/**
+ * Displays an Experience in an Experiences group.
+ * 
+ * @param {Object} experience - is an Experience object
+ * @param {Function} onClick - a function that should be called when an experience object has been clicked.
+ * @returns the rendered component
+ */
 function Experience ({ experience, onClick }) {
     return (
         <div className={styles.experience} onClick={(event) => onClick(experience, event)}>

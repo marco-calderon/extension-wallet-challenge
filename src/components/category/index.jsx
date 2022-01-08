@@ -4,6 +4,13 @@ import styles from './index.module.css';
 import Button from '../button';
 import rightArrowIcon from '../../svg/rightArrowIcon.svg';
 
+/**
+ * Displays a Category data for a Categories group.
+ * 
+ * @param {Object} props - is the props object
+ * @param {Object} category - is a Category object to display data from
+ * @returns the rendered component
+ */
 function Category ({ category }) {
     return (
         <div className={styles.category} style={{ background: category.background }}>

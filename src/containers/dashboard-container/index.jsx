@@ -5,6 +5,13 @@ import Categories from '../categories';
 import Experiences from '../recent-experiences';
 import styles from './index.module.css';
 
+/**
+ * This section will handle the requesting data for Recent Experiences and Popular Categories.
+ * It will properly show them in the required format.
+ * 
+ * @param {Object} props - is the props object
+ * @returns 
+ */
 function DashboardContainer (props) {
     const [experiences, setExperiences] = useState([]);
     const [categories, setCategories] = useState([]);

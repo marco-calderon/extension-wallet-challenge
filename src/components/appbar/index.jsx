@@ -7,6 +7,14 @@ import notificationsIcon from '../../svg/notificationsIcon.svg';
 import settingsIcon from '../../svg/settingsIcon.svg';
 import UserDropdown from '../user-dropdown';
 
+/**
+ * Displays the app bar for the application.
+ * 
+ * @param {Object} props - is the props object
+ * @param {Boolean} props.back - indicates whether a back button should be displayed
+ * @param {Boolean} props.home - indicates whether a home button should be displayed
+ * @returns the rendered component
+ */
 export const Appbar = ({ back, home }) => {
     return (
         <div className={styles.appbar}>
