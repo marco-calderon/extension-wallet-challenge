@@ -1,8 +1,15 @@
 import React from 'react';
 import FilterEntry from './entry';
 import styles from './index.module.css';
-import Avatar from '../../components/avatar';
 
+/**
+ * Shows a list of filter options related for category filtering.
+ * 
+ * @param {Object} props - is the props object
+ * @param {Array} props.options - is the options array for displaying categories
+ * @param {Function} props.onFilterClick - function to be called when option has been clicked 
+ * @returns the rendered component.
+ */
 function FilterOptions ({ options, onFilterClick }) {
     return (
         <div className={styles.container}>

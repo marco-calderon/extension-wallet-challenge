@@ -12,6 +12,7 @@
     user-select: none;
     flex-direction: row;
     align-items: center;
+    flex: 1;
   }
   
   /* Hide the browser's default checkbox */

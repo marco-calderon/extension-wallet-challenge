@@ -6,6 +6,8 @@ import Experiences from '../recent-experiences';
 import styles from './index.module.css';
 import Modal from '../../components/modal';
 import FilterOptions from '../filter';
+import Button from '../../components/button';
+import closeIcon from '../../svg/closeIcon.svg';
 
 /**
  * This section will handle the requesting data for Recent Experiences and Popular Categories.
@@ -63,7 +65,15 @@ function DashboardContainer (props) {
                 <Experiences experiences={trending} title="Trending Experiences" seeAll={true} />
             </div>
             <Modal show={showFilterModal} onClose={() => setShowFilterModal(false)}>
-                <h3 className={styles.modalTitle}>Filter</h3>
+                <div className={styles.titleContainer}>
+                    <div className={styles.titleTextContainer}>
+                        <h3 className={styles.modalTitle}>Filter</h3>
+                        <span className={styles.count}>{allCategories && allCategories.length}</span>
+                    </div>
+                    <Button onClick={() => setShowFilterModal(false)}>
+                        <img src={closeIcon} alt="Close" />
+                    </Button>
+                </div>
                 <FilterOptions options={allCategories} onFilterClick={handleOnFilterOptionClick} />
             </Modal>
         </>
