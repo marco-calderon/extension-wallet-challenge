@@ -17,7 +17,7 @@
  * @returns a Promise that resolves into an array of Experiences.
  */
 export const getRecentExperiences = async () => {
-    const data = await fetch(`https://extension-wallet-challenge.netlify.app/.netlify/functions/experiences/recent`);
+    const data = await fetch(`https://extension-wallet-challenge.netlify.app/.netlify/functions/experiences-recent`);
     return await data.json();
 }
 
@@ -39,6 +39,6 @@ export const getRecentExperiences = async () => {
  * @returns a Promise that will resolve in an array of Categories.
  */
 export const getPopularCategories = async () => {
-    const data = await fetch(`https://extension-wallet-challenge.netlify.app/.netlify/functions/categories/popular`);
+    const data = await fetch(`https://extension-wallet-challenge.netlify.app/.netlify/functions/categories-popular`);
     return await data.json();
 }
