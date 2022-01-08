@@ -15,11 +15,14 @@ function Category ({ category }) {
     return (
         <div className={styles.category} style={{ background: category.background }}>
             <div className={styles.iconContainer}>
-                <img className={styles.icon} src={category.icon} style={{ background: category.iconColor }} alt="Category icon"></img>
+                {/* <img className={styles.icon} src={category.icon} style={{ background: category.iconColor }} alt="Category icon"></img> */}
+                <div className={styles.icon} style={{ background: category.iconColor }}>
+                    <span className="iconify" data-icon={category.icon} style={{ color: '#fff' }}></span>
+                </div>
             </div>
             <div className={styles.titleContainer}>
                 <h3 className={styles.title}>{category.name}</h3>
-                <Button>
+                <Button style={{ padding: 0 }}>
                     <img className={styles.titleIcon} src={rightArrowIcon} alt="Go to Category details"></img>
                 </Button>
             </div>
