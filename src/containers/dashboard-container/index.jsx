@@ -22,6 +22,8 @@ function DashboardContainer (props) {
     const [trending, setTrending] = useState([]);
     const [showFilterModal, setShowFilterModal] = useState(false);
     const [allCategories, setAllCategories] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [searchResults, setSearchResults] = useState([]);
 
     useEffect(() => {
         getRecentExperiences().then(result => setExperiences(result));
@@ -34,7 +36,13 @@ function DashboardContainer (props) {
     }, []);
 
     const handleOnSearch = (event) => {
-        console.log(event);
+        setSearchTerm(event);
+        const filtered = [
+            ...experiences.filter(e => e.name.toLowerCase().includes(event)),
+            ...trending.filter(e => e.name.toLowerCase().includes(event)),
+        ];
+
+        setSearchResults(filtered);
     }
 
     const handleOnFilterClick = (filters) => {
@@ -60,9 +68,16 @@ function DashboardContainer (props) {
         <>
             <div className={styles.container}>
                 <Search onSearch={handleOnSearch} onFilterClick={handleOnFilterClick} />
-                <Experiences experiences={experiences} title="Recent Experiences" />
-                <Categories categories={categories} title="Popular Categories" seeAll={true} />
-                <Experiences experiences={trending} title="Trending Experiences" seeAll={true} />
+                {searchTerm && searchTerm.length > 0 && (
+                    <Experiences experiences={searchResults} title={`${searchResults && searchResults.length} experiences found`} />
+                )}
+                {(!searchTerm || searchTerm.length === 0) && (
+                    <>
+                        <Experiences experiences={experiences} title="Recent Experiences" />
+                        <Categories categories={categories} title="Popular Categories" seeAll={true} />
+                        <Experiences experiences={trending} title="Trending Experiences" seeAll={true} />
+                    </>
+                )}
             </div>
             <Modal show={showFilterModal} onClose={() => setShowFilterModal(false)}>
                 <div className={styles.titleContainer}>
