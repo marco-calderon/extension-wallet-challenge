@@ -85,7 +85,7 @@ function DashboardContainer (props) {
                 <div className={styles.titleContainer}>
                     <div className={styles.titleTextContainer}>
                         <h3 className={styles.modalTitle}>Filter</h3>
-                        <span className={styles.count}>{allCategories && allCategories.length}</span>
+                        <span className={styles.count}>{allCategories && allCategories.filter(c => c.checked === true).length}</span>
                     </div>
                     <Button onClick={() => setShowFilterModal(false)}>
                         <img src={closeIcon} alt="Close" />
