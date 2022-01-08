@@ -21,8 +21,8 @@ The Categories are of the form:
 }
 ```
 
-The endpoints available are:
-- Popular categories: https://extension-wallet-challenge.netlify.app/.netlify/functions/categories-popular
+Endpoints to be implemented:
+- Popular categories
 
 ### Experiences
 
@@ -39,5 +39,7 @@ Experiences are of the form:
 }
 ```
 
-The endpoints available are:
-- Recent experiences: https://extension-wallet-challenge.netlify.app/.netlify/functions/experiences-recent
+Endpoints to be implemented:
+- Recent experiences
+- Experiences search
+- Trending experiences
