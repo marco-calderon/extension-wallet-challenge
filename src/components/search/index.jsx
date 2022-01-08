@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PropTypes } from 'prop-types';
 import styles from './index.module.css';
 import searchIcon from '../../svg/searchIcon.svg';
 import filterIcon from '../../svg/filterIcon.svg';
 
 function Search ({ onSearch }) {
-    const [search, setSearch] = useState('');
-
     const handleOnTextChange = (event) => {
         console.log(event);
         onSearch(event);
-        setSearch(event);
     }
 
     return (
