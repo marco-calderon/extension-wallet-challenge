@@ -6,6 +6,11 @@ This is a React application made for a challenge in which it is showcased practi
 
 https://extension-wallet-challenge.netlify.app
 
+## User flow implemented
+
+Dashboard -> Experience
+Dashboard -> Filtering
+
 ## Data sources
 
 For the data inside the application a simple structure is given by the User Stories and given documentation.
