@@ -46,6 +46,55 @@ export const getRecentExperiences = () => {
 }
 
 /**
+ * Gets the trending experiences.
+ * 
+ * It will return an array of elements with this structure:
+ * 
+ * ```
+ * {
+ *    id: 'asd123',
+ *    name: 'DeFi Swap',
+ *    description: 'Swap your digital assets',
+ *    color: '#2F80ED',
+ *    icon: '',
+ *    users: '+200 users'
+ * }
+ * ```
+ * 
+ * @returns a Promise that resolves into an array of Experiences.
+ */
+ export const getTrendingExperiences = () => {
+    return new Promise((resolve, rejext) => {
+        resolve([
+            {
+                id: 'asd123',
+                name: 'DeFi Swap',
+                description: 'Swap your digital assets',
+                color: '#2F80ED',
+                icon: '',
+                users: '+200 users'
+            },
+            {
+                id: 'asd124',
+                name: 'Docu sign',
+                description: 'sign smart contracts seamlessly',
+                color: '#BB85FF',
+                icon: '',
+                users: '+1k users',
+            },
+            {
+                id: 'asd125',
+                name: 'Experience',
+                description: 'Description',
+                color: '#00C08B',
+                icon: '',
+                users: '+500 users',
+            },
+        ])
+    });
+}
+
+/**
  * Gets the popular categories using a mock function.
  * 
  * It will resolve into an array of Categories, which have this shape:
@@ -101,7 +150,7 @@ export const getPopularCategories = () => {
                 background: '#EBF5FF',
             },
             {
-                id: 'zxc126',
+                id: 'zxc128',
                 name: 'Utilities',
                 icon: 'bx:bx-shape-triangle',
                 iconColor: '#885FFF',

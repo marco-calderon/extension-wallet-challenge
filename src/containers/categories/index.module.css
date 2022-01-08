@@ -4,10 +4,16 @@
     padding: 16px;
 }
 
+.titleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
 .title {
     font-size: 16px;
     margin: 0;
-    margin-bottom: 16px;
 }
 
 .categories {
@@ -15,4 +21,28 @@
     flex: 1;
     grid-template-columns: 1fr 1fr;
     grid-gap: 14px;
+}
+
+.seeAll {
+    cursor: pointer;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0px;
+    font: inherit;
+    outline: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.seeAllLabel {
+    margin: 0;
+    margin-right: 8px;
+    color: #885FFF;
+    font-size: 15px;
+}
+
+.separator {
+    flex: 1;
 }

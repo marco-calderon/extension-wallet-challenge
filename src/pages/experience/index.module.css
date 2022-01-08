@@ -1,0 +1,22 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.headerColor {
+    background: red;
+    bottom: -50px;
+}
+
+.headerIconContainer {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 69px;
+    height: 69px;
+}
+
+.separator {
+    flex: 1;
+}

@@ -15,7 +15,7 @@ function Experience ({ experience, onClick }) {
     return (
         <div className={styles.experience} onClick={(event) => onClick(experience, event)}>
             <div className={styles.iconContainer} style={{ background: `${experience.color}` }}>
-
+                
             </div>
             <div className={styles.details}>
                 <h3 className={styles.detailsTitle}>{experience.name}</h3>
