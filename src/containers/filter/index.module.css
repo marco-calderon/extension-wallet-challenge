@@ -5,6 +5,8 @@
 .labelContainer {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    flex: 1;
 }
 
 .categoryIcon {
@@ -14,4 +16,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 15px;
+    flex: 1;
 }

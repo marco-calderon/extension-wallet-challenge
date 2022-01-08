@@ -1,6 +1,6 @@
 /* Customize the label (the container) */
 .container {
-    display: inline-block;
+    display: inline-flex;
     position: relative;
     padding-left: 35px;
     margin-bottom: 12px;
@@ -10,6 +10,8 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    flex-direction: row;
+    align-items: center;
   }
   
   /* Hide the browser's default checkbox */
@@ -24,7 +26,6 @@
   /* Create a custom checkbox */
   .checkmark {
     position: absolute;
-    top: 0px;
     left: 0;
     height: 16px;
     width: 16px;
