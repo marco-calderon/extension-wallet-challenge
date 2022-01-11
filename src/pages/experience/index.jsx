@@ -40,7 +40,7 @@ function ExperiencePage (props) {
     } 
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} data-cy="experience__page">
             <div className={styles.headerContainer}>
                 <div className={styles.headerColor} style={{ background: experience.background }}></div>
                 <div className={styles.headerIconContainer}>

@@ -13,17 +13,17 @@ import Button from '../button';
  */
 function Experience ({ experience, onClick }) {
     return (
-        <div className={styles.experience} onClick={(event) => onClick(experience, event)}>
-            <div className={styles.iconContainer} style={{ background: `${experience.color}` }}>
+        <div className={styles.experience} onClick={(event) => onClick(experience, event)} data-cy="experience">
+            <div className={styles.iconContainer} style={{ background: `${experience.color}` }} data-cy="experience__icon">
                 
             </div>
-            <div className={styles.details}>
-                <h3 className={styles.detailsTitle}>{experience.name}</h3>
-                <p className={styles.detailsDesc}>{experience.description}</p>
-                <span className={styles.detailsUsers}>{experience.users}</span>
+            <div className={styles.details} data-cy="experience__details">
+                <h3 className={styles.detailsTitle} data-cy="experience__details__title">{experience.name}</h3>
+                <p className={styles.detailsDesc} data-cy="experience__details__desc">{experience.description}</p>
+                <span className={styles.detailsUsers} data-cy="experience__details__users">{experience.users}</span>
             </div>
             <Button>
-                <img src={rightArrowIcon} alt="Go to Experience details" />
+                <img src={rightArrowIcon} alt="Go to Experience details" data-cy="experience__details__button" />
             </Button>
         </div>
     );

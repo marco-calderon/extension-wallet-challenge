@@ -23,7 +23,7 @@ function Experiences ({ title, experiences, seeAll, onSeeAll }) {
     } 
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} data-cy="experiences-container">
             <div className={styles.titleContainer}>
                 <h3 className={styles.title}>{title}</h3>
                 {seeAll && (
